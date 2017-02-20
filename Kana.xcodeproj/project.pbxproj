@@ -737,7 +737,7 @@
 					4EDF332D1E2634CA00C3736B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 8L9ASULL6N;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1033,8 +1033,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Karmick Solutions Pvt. Ltd. (8L9ASULL6N)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Karmick Solutions Pvt. Ltd. (8L9ASULL6N)";
-				DEVELOPMENT_TEAM = 8L9ASULL6N;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Kana/BusinessLayer/MapView/GoogleMaps",
@@ -1044,8 +1044,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KanaAdhoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "702ce101-a299-4ec9-aede-57c9f08d7259";
-				PROVISIONING_PROFILE_SPECIFIER = KanaAdhocProvisioningProfile_NEW;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -1056,8 +1056,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Karmick Solutions Pvt. Ltd. (8L9ASULL6N)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Karmick Solutions Pvt. Ltd. (8L9ASULL6N)";
-				DEVELOPMENT_TEAM = 8L9ASULL6N;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Kana/BusinessLayer/MapView/GoogleMaps",
@@ -1067,8 +1067,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KanaAdhoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "702ce101-a299-4ec9-aede-57c9f08d7259";
-				PROVISIONING_PROFILE_SPECIFIER = KanaAdhocProvisioningProfile_NEW;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
