@@ -1,0 +1,49 @@
+//
+//  User.h
+//  DescribeSomething
+//
+//  Created by Apple on 13/06/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface User : NSObject{
+    UserType mUserType;
+    NSString *ReferenceId;
+    NSString *EmailId;
+    NSString *UserID;
+    NSString *UserName;
+    NSString *ImageUrl;
+    NSString *AvatarUrl;
+    int ActiveUrlEntry;    
+    
+    int loginStatus;
+    BOOL isSelected;
+    
+    NSString *Password;
+    NSString *KeyUser;
+    
+    NSString *UserScore;
+    
+    int IsFacebookShare;
+}
+@property (nonatomic, assign) UserType mUserType;
+@property(nonatomic,retain) NSString *ReferenceId;
+@property(nonatomic,retain) NSString *EmailId;
+@property(nonatomic,retain) NSString *UserID;
+@property(nonatomic,retain) NSString *UserName;
+@property (nonatomic, retain) NSString *ImageUrl;
+@property (nonatomic, retain) NSString *AvatarUrl;
+@property (nonatomic, readwrite) int ActiveUrlEntry;
+
+@property (nonatomic, readwrite) int loginStatus;
+@property(nonatomic,readwrite) BOOL isSelected;
+
+@property (nonatomic, retain) NSString *Password;
+@property (nonatomic, retain) NSString *KeyUser;
+@property (nonatomic, retain)NSString *UserScore;
+
+@property (nonatomic, readwrite) int IsFacebookShare;
+
+@end

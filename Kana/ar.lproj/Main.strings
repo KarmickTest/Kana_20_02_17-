@@ -1,0 +1,132 @@
+
+/* Class = "UILabel"; text = "DOCTOR LISTING"; ObjectID = "43H-GI-AbW"; */
+"43H-GI-AbW.text" = "DOCTOR LISTING";
+
+/* Class = "UILabel"; text = "CHOOSE CLINIC"; ObjectID = "4NC-Su-I8e"; */
+"4NC-Su-I8e.text" = "CHOOSE CLINIC";
+
+/* Class = "UILabel"; text = "GALLERY"; ObjectID = "4cx-tE-P5D"; */
+"4cx-tE-P5D.text" = "GALLERY";
+
+/* Class = "UILabel"; text = "Surgey"; ObjectID = "6nT-ST-QSx"; */
+"6nT-ST-QSx.text" = "Surgey";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "7co-F8-VoV"; */
+"7co-F8-VoV.title" = "Home";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply "; ObjectID = "9by-xx-irl"; */
+"9by-xx-irl.text" = "Lorem Ipsum is simply";
+
+/* Class = "UILabel"; text = "TESTIMONIALS"; ObjectID = "Dil-RZ-6yZ"; */
+"Dil-RZ-6yZ.text" = "TESTIMONIALS";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "E2c-Gp-CUY"; */
+"E2c-Gp-CUY.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "FTv-Uf-hbc"; */
+"FTv-Uf-hbc.title" = "Search";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "GIB-wt-rzR"; */
+"GIB-wt-rzR.normalTitle" = "Close";
+
+/* Class = "UILabel"; text = "HOME"; ObjectID = "IIc-7z-nCY"; */
+"IIc-7z-nCY.text" = "HOME";
+
+/* Class = "UISearchBar"; placeholder = "You can search here by doctor name,clinic name,clinic address, speciality"; ObjectID = "ISy-qO-80Y"; */
+"ISy-qO-80Y.placeholder" = "You can search here by doctor name,clinic name,clinic address, speciality";
+
+/* Class = "UILabel"; text = "Oncology(Cancer Care)"; ObjectID = "IxJ-uS-TwK"; */
+"IxJ-uS-TwK.text" = "Oncology(Cancer Care)";
+
+/* Class = "UILabel"; text = "ABOUT"; ObjectID = "JMY-Oy-6Xt"; */
+"JMY-Oy-6Xt.text" = "ABOUT";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."; ObjectID = "NdN-LW-Ccx"; */
+"NdN-LW-Ccx.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.";
+
+/* Class = "UILabel"; text = "₹500"; ObjectID = "NyW-ux-JAH"; */
+"NyW-ux-JAH.text" = "₹500";
+
+/* Class = "UITabBarItem"; title = "Media"; ObjectID = "ORN-dP-iNK"; */
+"ORN-dP-iNK.title" = "Media";
+
+/* Class = "UILabel"; text = "SEARCH"; ObjectID = "OSd-Wo-wB9"; */
+"OSd-Wo-wB9.text" = "SEARCH";
+
+/* Class = "UILabel"; text = "MEDIA"; ObjectID = "QX3-oJ-P91"; */
+"QX3-oJ-P91.text" = "MEDIA";
+
+/* Class = "UITabBarItem"; title = "Gallery"; ObjectID = "RZO-l4-PB6"; */
+"RZO-l4-PB6.title" = "Gallery";
+
+/* Class = "UILabel"; text = "Consultant"; ObjectID = "SuO-kq-fFy"; */
+"SuO-kq-fFy.text" = "Consultant";
+
+/* Class = "UILabel"; text = "No data found"; ObjectID = "UMz-qc-wHi"; */
+"UMz-qc-wHi.text" = "No data found";
+
+/* Class = "UILabel"; text = "AVAILABLE"; ObjectID = "V1b-zM-5us"; */
+"V1b-zM-5us.text" = "AVAILABLE";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WEu-b0-F7p"; */
+"WEu-b0-F7p.text" = "Label";
+
+/* Class = "UILabel"; text = "Search"; ObjectID = "Yyq-8X-l3u"; */
+"Yyq-8X-l3u.text" = "Search";
+
+/* Class = "UITabBarItem"; title = "More"; ObjectID = "c4T-al-khx"; */
+"c4T-al-khx.title" = "More";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply "; ObjectID = "cDl-V8-LfF"; */
+"cDl-V8-LfF.text" = "Lorem Ipsum is simply ";
+
+/* Class = "UILabel"; text = "CLINIC"; ObjectID = "cuT-QT-i5v"; */
+"cuT-QT-i5v.text" = "CLINIC";
+
+/* Class = "UILabel"; text = "ABOUT"; ObjectID = "dI1-6i-kox"; */
+"dI1-6i-kox.text" = "ABOUT";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply "; ObjectID = "dWE-zP-ycT"; */
+"dWE-zP-ycT.text" = "Lorem Ipsum is simply ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "egc-5u-I7r"; */
+"egc-5u-I7r.text" = "Label";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."; ObjectID = "feP-5S-Xft"; */
+"feP-5S-Xft.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+/* Class = "UILabel"; text = "Lorem Ipsum "; ObjectID = "gCS-KT-eWR"; */
+"gCS-KT-eWR.text" = "Lorem Ipsum ";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply "; ObjectID = "gK1-hQ-3Ik"; */
+"gK1-hQ-3Ik.text" = "Lorem Ipsum is simply ";
+
+/* Class = "UILabel"; text = "Lorem Ipsum "; ObjectID = "kFb-Po-kgm"; */
+"kFb-Po-kgm.text" = "Lorem Ipsum ";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."; ObjectID = "lE6-5G-oXm"; */
+"lE6-5G-oXm.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "peT-cT-l9z"; */
+"peT-cT-l9z.text" = "Label";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply "; ObjectID = "qIU-cM-kme"; */
+"qIU-cM-kme.text" = "Lorem Ipsum is simply ";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply "; ObjectID = "tMc-Nw-k4f"; */
+"tMc-Nw-k4f.text" = "Lorem Ipsum is simply ";
+
+/* Class = "UILabel"; text = "Dr. Purneet Alhuwalia"; ObjectID = "ub0-ND-a8n"; */
+"ub0-ND-a8n.text" = "Dr. Purneet Alhuwalia";
+
+/* Class = "UILabel"; text = "FAQ"; ObjectID = "umM-pW-z8d"; */
+"umM-pW-z8d.text" = "FAQ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yHU-vK-5mw"; */
+"yHU-vK-5mw.text" = "Label";
+
+/* Class = "UILabel"; text = "Max Hospital,Dehradoon"; ObjectID = "z3L-Es-is9"; */
+"z3L-Es-is9.text" = "Max Hospital,Dehradoon";
+
+/* Class = "UILabel"; text = "MORE"; ObjectID = "zm7-Au-7HY"; */
+"zm7-Au-7HY.text" = "MORE";

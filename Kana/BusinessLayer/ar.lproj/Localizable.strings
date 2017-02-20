@@ -1,0 +1,34 @@
+/* 
+  Localizable_eng.strings
+  Kana
+
+  Created by Karmick on 07/02/17.
+  Copyright © 2017 Karmick. All rights reserved.
+*/
+/*********************************************FirstViewController*************************************/
+"CHOOSECLINIC"="اختيار عيادة";
+/*********************************************HomeViewController*************************************/
+"CLINIC"="عيادة";
+"NOCONTENTAVAILABLE"="أي محتوى متوفر";
+"OK"="حسنا";
+/*********************************************MoreViewController*************************************/
+"MORE"="أكثر من";
+"ABOUTUS"="معلومات عنا";
+"TESTIMONIALS"="الشهادات - التوصيات";
+"TERMS&CONDITIONS"="البنود و الظروف";
+"FAQ"="التعليمات";
+"CONTACTUS"="اتصل بنا";
+"CHANGELANGUAGE"="غير اللغة";
+"ENGLISH"="الإنجليزية";
+"ARABIC"="عربى";
+"CANCEL"="إلغاء";
+"CHANGELANGUAGE"="غير اللغة";
+"SELECTYOURLANGUAGE"="اختر لغتك";
+/*********************************************AboutUsViewController*************************************/
+"RATEUSONAPPSTORE"="معدل لنا على أبستور";
+"CALLUS"="اتصل بنا";
+"MAILUS"="البريد بنا";
+
+
+
+

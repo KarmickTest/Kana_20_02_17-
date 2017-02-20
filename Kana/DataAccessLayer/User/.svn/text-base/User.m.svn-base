@@ -1,0 +1,103 @@
+//
+//  User.m
+//  DescribeSomething
+//
+//  Created by Apple on 13/06/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import "User.h"
+
+@implementation User
+
+@synthesize mUserType;
+@synthesize EmailId;
+@synthesize UserID;
+@synthesize UserName;
+@synthesize ImageUrl;
+@synthesize ReferenceId;
+@synthesize loginStatus;
+@synthesize isSelected;
+@synthesize ActiveUrlEntry;
+@synthesize AvatarUrl;
+
+@synthesize Password;
+@synthesize KeyUser;
+
+@synthesize UserScore;
+
+@synthesize IsFacebookShare;
+
+-(id) init
+{
+	// always call "super" init
+	// Apple recommends to re-assign "self" with the "super" return value
+	if( (self=[super init])) {
+        [self setUserType:UserTypeEMAIL];
+        self.ReferenceId = @"";
+        self.EmailId = @"";
+        self.UserID = @"";
+        self.UserName = @"";
+        self.ImageUrl = @"";
+        self.Password = @"";
+        self.KeyUser = @"";
+        self.UserScore = @"";
+        self.ActiveUrlEntry=0;
+        self.AvatarUrl = @"";
+        self.IsFacebookShare=1;
+	}
+	return self;
+}
+
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    //Encode properties, other class variables, etc
+    [encoder encodeInt:(int)self.mUserType forKey:@"mUserType"];
+    [encoder encodeObject:self.ReferenceId forKey:@"ReferenceId"];
+    [encoder encodeObject:self.EmailId forKey:@"EmailId"];
+    [encoder encodeObject:self.UserID forKey:@"UserID"];
+    [encoder encodeObject:self.UserName forKey:@"UserName"];
+    [encoder encodeObject:self.ImageUrl forKey:@"ImageUrl"];
+    [encoder encodeObject:self.Password forKey:@"Password"];
+    [encoder encodeObject:self.KeyUser forKey:@"KeyUser"];
+    [encoder encodeObject:self.UserScore forKey:@"UserScore"];
+    [encoder encodeInt:self.ActiveUrlEntry forKey:@"ActiveUrlEntry"];
+    [encoder encodeObject:self.AvatarUrl forKey:@"AvatarUrl"];
+    [encoder encodeInt:self.IsFacebookShare forKey:@"IsFacebookShare"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if((self = [super init])) {
+        //decode properties, other class vars
+        [self setUserType:[decoder decodeIntForKey:@"mUserType"]];
+        self.ReferenceId = [decoder decodeObjectForKey:@"ReferenceId"];
+        self.EmailId = [decoder decodeObjectForKey:@"EmailId"];
+        self.UserID = [decoder decodeObjectForKey:@"UserID"];
+        self.UserName = [decoder decodeObjectForKey:@"UserName"];
+        self.ImageUrl = [decoder decodeObjectForKey:@"ImageUrl"];
+        self.Password = [decoder decodeObjectForKey:@"Password"];
+        self.KeyUser = [decoder decodeObjectForKey:@"KeyUser"];
+        self.UserScore = [decoder decodeObjectForKey:@"UserScore"];
+        self.ActiveUrlEntry=[decoder decodeIntForKey:@"ActiveUrlEntry"];
+        self.AvatarUrl = [decoder decodeObjectForKey:@"AvatarUrl"];
+        self.IsFacebookShare = [decoder decodeIntForKey:@"IsFacebookShare"];
+    }
+    return self;
+}
+
+
+-(void)setUserType:(int)value{
+    switch (value) {
+        case 1:
+            self.mUserType=UserTypeFB;
+            break;
+        case 2:
+            self.mUserType=UserTypeTWT;
+            break;
+        case 3:
+            self.mUserType=UserTypeEMAIL;
+            break;
+    }
+}
+
+@end

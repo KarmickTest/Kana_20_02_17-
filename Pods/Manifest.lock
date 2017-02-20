@@ -1,0 +1,29 @@
+PODS:
+  - DACircularProgress (2.3.1)
+  - JTCalendar (2.1.9)
+  - MBProgressHUD (1.0.0)
+  - SCLAlertView-Objective-C (1.1.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SYPhotoBrowser (2.1):
+    - DACircularProgress
+    - SDWebImage
+
+DEPENDENCIES:
+  - JTCalendar (~> 2.0)
+  - MBProgressHUD (~> 1.0.0)
+  - SCLAlertView-Objective-C
+  - SYPhotoBrowser
+
+SPEC CHECKSUMS:
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  JTCalendar: beb2f4c1b639bf6880f680b4858227acf83a049c
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SCLAlertView-Objective-C: 349a894d4e1d1dbf14d443da784c6ca1e92c78d2
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SYPhotoBrowser: 68be184ed938d9fa23cc94c60e638e9322a53677
+
+PODFILE CHECKSUM: d3ba0026e1f050ec3bf077fc3ea513dc89cc357f
+
+COCOAPODS: 1.1.1

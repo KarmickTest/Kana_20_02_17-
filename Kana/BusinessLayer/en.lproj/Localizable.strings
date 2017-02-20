@@ -1,0 +1,32 @@
+/* 
+  Localizable_eng.strings
+  Kana
+
+  Created by Karmick on 07/02/17.
+  Copyright © 2017 Karmick. All rights reserved.
+*/
+/*********************************************FirstViewController*************************************/
+"CHOOSECLINIC"="CHOOSE CLINIC";
+/*********************************************HomeViewController*************************************/
+"CLINIC"="CLINIC";
+"NOCONTENTAVAILABLE"="No content available";
+"OK"="OK";
+/*********************************************MoreViewController*************************************/
+"MORE"="MORE";
+"ABOUTUS"="About Us";
+"TESTIMONIALS"="Testimonials";
+"TERMS&CONDITIONS"="Terms & Conditions";
+"FAQ"="Faq";
+"CONTACTUS"="Contact Us";
+"CHANGELANGUAGE"="Change Language";
+"ENGLISH"="ENGLISH";
+"ARABIC"="ARABIC";
+"CANCEL"="CANCEL";
+"CHANGELANGUAGE"="Change Language";
+"SELECTYOURLANGUAGE"="Select Your Language";
+/*********************************************AboutUsViewController*************************************/
+"RATEUSONAPPSTORE"="Rate us on Appstore";
+"CALLUS"="Call us";
+"MAILUS"="Mail Us";
+
+
