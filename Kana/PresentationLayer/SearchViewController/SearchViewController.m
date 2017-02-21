@@ -107,7 +107,7 @@
     DebugLog(@"languageCheck%@",languageCheck);
     if ([Utility isNetworkAvailable]==YES) {
         /**********Custom loader****************/
-        NSString *strPostParameter=[NSString stringWithFormat:@"search=%@",str];
+        NSString *strPostParameter=[NSString stringWithFormat:@"search=%@&lang=%@",str,languageCheck];
         DebugLog(@"strPostParameter:%@",strPostParameter);
         hud=[MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         NSString *strTestimonialsApi=[NSString stringWithFormat:@"%@%@",API,SEARCH];
