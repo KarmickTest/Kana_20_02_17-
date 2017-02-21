@@ -140,7 +140,7 @@
         [[Singelton getInstance] jsonParseWithPostMethod:^(NSDictionary *result)
          {
              DebugLog(@"The value:%@",result);
-             
+             [hud hideAnimated:YES];
              if ([[result valueForKey:@"success"] boolValue]==1)
              {
                 
@@ -166,9 +166,24 @@
                  [_DoctorTimeTableView reloadData];
                 }
                 }
+                }
+             else{
+                  _lbl_Doctor_Location.text=[[arrmCliniclocation objectAtIndex:0]valueForKey:@"location"];
+                  for (int i=0; i<arrmCliniclocation.count; i++) {
+                      arrmTrimAvailableDate=[[arrmCliniclocation objectAtIndex:0]valueForKey:@"availabledate"];
+                  }
+                 DebugLog(@"arrmTrimAvailableDate%@",arrmTrimAvailableDate);
+                 for (int i=0; i<arrmTrimAvailableDate.count; i++) {
+                     NSString *str=[NSString stringWithFormat:@"%@",[[arrmTrimAvailableDate valueForKey:@"time"] objectAtIndex:i]];
+                     if (str.length>0) {
+                         DebugLog(@"str====%@",str);
+                         [arrmAvailableDate addObject:[arrmTrimAvailableDate objectAtIndex:i]];
+                         DebugLog(@"arrmAvailableDate====%@",arrmAvailableDate);
+                         
+                         [_DoctorTimeTableView reloadData];
+                     }
+                 }
                  
-                 //[self.webv_AboutUs loadHTMLString:AboutusHTMLdata baseURL:nil];
-                 [hud hideAnimated:YES];
              }
              }
              else
