@@ -27,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
    
-     alert=[[SCLAlertView alloc]init];
+    
     _tblv_Testimonials.delegate=self;
     _tblv_Testimonials.dataSource=self;
     arrmTestimonials=[[NSMutableArray alloc]init];
@@ -77,6 +77,7 @@
                 DebugLog(@"arrmTestimonials====%@",arrmTestimonials);
             }
             else{
+                alert=[[SCLAlertView alloc]init];
                 [alert showWarning:self title:@"Oops!" subTitle:[testResult valueForKey:@"message"] closeButtonTitle:@"OK" duration:0.0f];
             }
             
@@ -87,6 +88,7 @@
         } andString:strTestimonbialsApi];
     }
     else{
+        alert=[[SCLAlertView alloc]init];
         [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
     }
 }

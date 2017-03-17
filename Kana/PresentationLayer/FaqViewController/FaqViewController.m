@@ -34,7 +34,7 @@
     LocalizationSetLanguage(languageCheck);
     
     arrmFaqContent=[[NSMutableArray alloc]init];
-     alert= [[SCLAlertView alloc] init];
+    
     _tblv_Faq_Table.delegate=self;
     _tblv_Faq_Table.dataSource=self;
     _vw_Show_Answer.hidden=YES;
@@ -83,6 +83,7 @@
                  [_tblv_Faq_Table reloadData];
             }
             else{
+                alert=[[SCLAlertView alloc]init];
                 [alert showWarning:self title:@"Oops!" subTitle:[testResult valueForKey:@"message"] closeButtonTitle:@"OK" duration:0.0f];
                 
             }
@@ -93,6 +94,7 @@
         } andString:strFaqApi];
     }
     else{
+        alert=[[SCLAlertView alloc]init];
         [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
     }
 }

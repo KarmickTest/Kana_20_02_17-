@@ -35,7 +35,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
    
-    arrmHomeContent=[[NSMutableArray alloc]initWithObjects:@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3", nil];
+   // arrmHomeContent=[[NSMutableArray alloc]initWithObjects:@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3",@"HomeCellImage1",@"HomeCellImage2",@"HomeCellImage3", nil];
      arrmHomeContent1=[[NSMutableArray alloc]init];
      arrmHomeContent1=[[NSUserDefaults standardUserDefaults]objectForKey:@"Specialization"];
     alert= [[SCLAlertView alloc] init];
@@ -54,16 +54,18 @@
    languageCheck =[[NSUserDefaults standardUserDefaults]objectForKey:@"languageCode"];
     LocalizationSetLanguage(languageCheck);
     _lbl_Clinic.text=LocalizedString(@"CLINIC");
-    if (arrmHomeContent.count>0) {
-        _colv_Home_Cell.delegate=self;
-        _colv_Home_Cell.dataSource=self;
-        [_colv_Home_Cell reloadData];
-    }
-    else{
-        
-        [alert showWarning:self title:@"Oops!" subTitle:LocalizedString(@"No content available") closeButtonTitle:LocalizedString(@"OK") duration:0.0f];
-        
-    }
+    _colv_Home_Cell.delegate=self;
+    _colv_Home_Cell.dataSource=self;
+//    if (arrmHomeContent.count>0) {
+//        _colv_Home_Cell.delegate=self;
+//        _colv_Home_Cell.dataSource=self;
+//        [_colv_Home_Cell reloadData];
+//    }
+//    else{
+//        
+//        [alert showWarning:self title:@"Oops!" subTitle:LocalizedString(@"No content available") closeButtonTitle:LocalizedString(@"OK") duration:0.0f];
+//        
+//    }
    
 }
 
@@ -73,14 +75,21 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btn_Back_Click:(id)sender {
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.3f;
-    transition.type = kCATransitionReveal;
-    transition.subtype = kCATransitionFade;
-    [self.navigationController.view.layer addAnimation:transition
-                                                forKey:kCATransition];
-    [self.navigationController popViewControllerAnimated:NO];
-
+    UIStoryboard *storyboard;// = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    if([languageCheck isEqualToString:@"en"]){
+        storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    }
+    else{
+        storyboard =[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:nil];
+    }
+    CATransition *transition = [CATransition animation];
+    transition.duration = .3;
+    transition.type = kCATransitionFade;
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    FirstViewController *mFirstViewController = [storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
+    [self.navigationController pushViewController:mFirstViewController animated:NO];
+    // [self.navigationController popViewControllerAnimated:NO];
+    
 }
 #pragma mark - CollectionView Delegate and Data Source
 
@@ -89,11 +98,11 @@
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
    
-    return [arrmHomeContent1 count];
+    return 18;
     
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CGSize size = CGSizeMake(225, 225);
+    CGSize size = CGSizeMake(225, 40);
     
     return size;
 }
@@ -107,9 +116,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
      HomeCell *mHomeCell = (HomeCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCell" forIndexPath:indexPath];
      mHomeCell.contentView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin |UIViewAutoresizingFlexibleTopMargin |UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
-     mHomeCell.imgv_Background_Image.image=[UIImage imageNamed:[NSString stringWithFormat:@"%@",[arrmHomeContent objectAtIndex:indexPath.row]]];
-    DebugLog(@"Spname %@",[[arrmHomeContent1 objectAtIndex:indexPath.row] valueForKey:@"spname"]);
-     mHomeCell.lbl_Clinic_Name.text=[[arrmHomeContent1 objectAtIndex:indexPath.row] valueForKey:@"spname"];
+    // DebugLog(@"Spname %@",[[arrmHomeContent1 objectAtIndex:indexPath.row] valueForKey:@"spname"]);
+     //mHomeCell.lbl_Clinic_Name.text=[[arrmHomeContent1 objectAtIndex:indexPath.row] valueForKey:@"spname"];
     return mHomeCell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

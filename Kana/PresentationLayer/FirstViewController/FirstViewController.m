@@ -43,7 +43,6 @@
     _colv_Choose_Clinic.dataSource=self;
     arrmHomeContent=[[NSMutableArray alloc]init];
     arrmSpecialization=[[NSMutableArray alloc]init];
-    alert= [[SCLAlertView alloc] init];
     [self getClinicList];
     
        
@@ -54,7 +53,7 @@
     languageCheck =[[NSUserDefaults standardUserDefaults]objectForKey:@"languageCode"];
     LocalizationSetLanguage(languageCheck);
     DebugLog(@"%@",languageCheck);
-    _lbl_Choose_Clinic.text=LocalizedString(@"CHOOSECLINIC");
+    _lbl_Choose_Clinic.text=LocalizedString(@"HOME");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -85,6 +84,7 @@
                     DebugLog(@"arrmHomeContent====%@",arrmHomeContent);
                }
              else{
+                 alert=[[SCLAlertView alloc]init];
                 [alert showWarning:self title:@"Oops!" subTitle:[testResult valueForKey:@"message"] closeButtonTitle:@"OK" duration:0.0f];
                      
                  }
@@ -95,6 +95,7 @@
                } andString:strClinicListApi andParam:strParameter];
             }
             else{
+                alert=[[SCLAlertView alloc]init];
             [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
      }
 }
@@ -138,33 +139,51 @@
     return mHomeCell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     UIStoryboard *storyboard;
-   
     if([languageCheck isEqualToString:@"en"]){
         storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     }
     else{
         storyboard =[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:nil];
     }
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Specialization"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    arrmSpecialization=[[arrmHomeContent valueForKey:@"speciality"]objectAtIndex:indexPath.row];
-    [[NSUserDefaults standardUserDefaults] setObject:arrmSpecialization forKey:@"Specialization"];
-    [[NSUserDefaults standardUserDefaults] setObject:[[arrmHomeContent valueForKey:@"id"]objectAtIndex:indexPath.row] forKey:@"ClinicId"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     
     CATransition *transition = [CATransition animation];
     transition.duration = .3;
     transition.type = kCATransitionFade;
     [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
-    TabBarController *mTabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
-    if([languageCheck isEqualToString:@"en"]){
-    }
-    else{
-    [mTabBarController setSelectedIndex:4];
-    }
     
-    [self.navigationController pushViewController:mTabBarController animated:NO];
+    DoctorListingViewController *mDoctorListingViewController = [storyboard instantiateViewControllerWithIdentifier:@"DoctorListingViewController"];
+    mDoctorListingViewController.strSpecialistId=[[arrmHomeContent objectAtIndex:indexPath.row] valueForKey:@"spid"];
+    DebugLog(@"strSpecialistId%@",mDoctorListingViewController.strSpecialistId);
+    [self.navigationController pushViewController:mDoctorListingViewController animated:NO];
+//    UIStoryboard *storyboard;
+//   
+//    if([languageCheck isEqualToString:@"en"]){
+//        storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    }
+//    else{
+//        storyboard =[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:nil];
+//    }
+//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Specialization"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//    arrmSpecialization=[[arrmHomeContent valueForKey:@"speciality"]objectAtIndex:indexPath.row];
+//    [[NSUserDefaults standardUserDefaults] setObject:arrmSpecialization forKey:@"Specialization"];
+//    [[NSUserDefaults standardUserDefaults] setObject:[[arrmHomeContent valueForKey:@"id"]objectAtIndex:indexPath.row] forKey:@"ClinicId"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//    
+//    CATransition *transition = [CATransition animation];
+//    transition.duration = .3;
+//    transition.type = kCATransitionFade;
+//    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+//    TabBarController *mTabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+//    if([languageCheck isEqualToString:@"en"]){
+//    }
+//    else{
+//    [mTabBarController setSelectedIndex:4];
+//    }
+//    
+//    [self.navigationController pushViewController:mTabBarController animated:NO];
     
    
     
