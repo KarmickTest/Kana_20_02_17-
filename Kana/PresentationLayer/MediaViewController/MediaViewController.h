@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MediaViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *MediaCollection;
 
 @end

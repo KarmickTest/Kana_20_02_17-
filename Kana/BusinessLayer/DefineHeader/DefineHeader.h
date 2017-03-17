@@ -38,6 +38,7 @@
 #import "DoctorDetalisCell.h"
 
 
+#import "MediaCollectionViewCell.h"
 #import "MediaSearchCell.h"
 #import "HomeCell.h"
 #import "GalleryCell.h"

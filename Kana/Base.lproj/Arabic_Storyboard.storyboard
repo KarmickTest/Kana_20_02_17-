@@ -884,15 +884,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIA-TO-uh0">
-                                                    <rect key="frame" x="0.0" y="4" width="200" height="192"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIA-TO-uh0">
+                                                    <rect key="frame" x="2" y="4" width="196" height="192"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="kIA-TO-uh0" secondAttribute="bottom" constant="4" id="9zg-is-Ykn"/>
-                                            <constraint firstAttribute="trailing" secondItem="kIA-TO-uh0" secondAttribute="trailing" id="cQ8-id-Rtd"/>
-                                            <constraint firstItem="kIA-TO-uh0" firstAttribute="leading" secondItem="eA1-RI-gG0" secondAttribute="leading" id="uOx-cD-B5H"/>
+                                            <constraint firstAttribute="trailing" secondItem="kIA-TO-uh0" secondAttribute="trailing" constant="2" id="cQ8-id-Rtd"/>
+                                            <constraint firstItem="kIA-TO-uh0" firstAttribute="leading" secondItem="eA1-RI-gG0" secondAttribute="leading" constant="2" id="uOx-cD-B5H"/>
                                             <constraint firstItem="kIA-TO-uh0" firstAttribute="top" secondItem="eA1-RI-gG0" secondAttribute="top" constant="4" id="yP1-Ah-97U"/>
                                         </constraints>
                                         <connections>
@@ -1581,20 +1581,75 @@
                                     <outlet property="delegate" destination="okj-mw-TAg" id="l7r-Yw-QWX"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rq-vh-A0Z">
+                                <rect key="frame" x="20" y="80" width="728" height="895"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1ae-vX-z2s">
+                                        <rect key="frame" x="0.0" y="0.0" width="728" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="UWn-za-VrW">
+                                            <size key="itemSize" width="299" height="247"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MediaCollectionViewCell" id="p1p-Hm-tjN" customClass="MediaCollectionViewCell">
+                                                <rect key="frame" x="0.0" y="0.0" width="299" height="247"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="247"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A0w-4d-eu2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="247"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="KNA-XU-TsZ">
+                                                            <rect key="frame" x="124" y="99" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="U04-HY-tmW"/>
+                                                                <constraint firstAttribute="width" constant="50" id="lrD-7C-T2L"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="A0w-4d-eu2" secondAttribute="trailing" id="E2A-hJ-aFw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="A0w-4d-eu2" secondAttribute="bottom" id="NiM-HJ-Mxe"/>
+                                                    <constraint firstItem="KNA-XU-TsZ" firstAttribute="centerX" secondItem="p1p-Hm-tjN" secondAttribute="centerX" id="UfP-QT-YcV"/>
+                                                    <constraint firstItem="A0w-4d-eu2" firstAttribute="top" secondItem="p1p-Hm-tjN" secondAttribute="top" id="cTA-uV-450"/>
+                                                    <constraint firstItem="A0w-4d-eu2" firstAttribute="leading" secondItem="p1p-Hm-tjN" secondAttribute="leading" id="ccA-ma-aEp"/>
+                                                    <constraint firstItem="KNA-XU-TsZ" firstAttribute="centerY" secondItem="p1p-Hm-tjN" secondAttribute="centerY" id="iXh-aD-KOp"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="YoutubeImageView" destination="A0w-4d-eu2" id="FxU-j8-szr"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="5rq-vh-A0Z" firstAttribute="leading" secondItem="Qxh-SG-3fS" secondAttribute="leading" constant="20" id="Cy0-RH-3Rh"/>
                             <constraint firstItem="5Lf-L8-14l" firstAttribute="top" secondItem="Qxh-SG-3fS" secondAttribute="top" id="D72-vL-D1i"/>
+                            <constraint firstItem="6XS-7K-rzB" firstAttribute="top" secondItem="5rq-vh-A0Z" secondAttribute="bottom" id="NtC-Hw-tix"/>
                             <constraint firstAttribute="trailing" secondItem="5Lf-L8-14l" secondAttribute="trailing" id="VKm-P9-B7U"/>
                             <constraint firstItem="5Lf-L8-14l" firstAttribute="leading" secondItem="Qxh-SG-3fS" secondAttribute="leading" id="YdG-E3-Bkx"/>
                             <constraint firstItem="XTu-kF-MRB" firstAttribute="leading" secondItem="Qxh-SG-3fS" secondAttribute="leading" constant="20" id="YjY-lQ-M88"/>
                             <constraint firstItem="XTu-kF-MRB" firstAttribute="top" secondItem="5Lf-L8-14l" secondAttribute="bottom" constant="10" id="hMm-4s-yCb"/>
+                            <constraint firstItem="5rq-vh-A0Z" firstAttribute="top" secondItem="5Lf-L8-14l" secondAttribute="bottom" constant="10" id="lT6-Xx-Ptx"/>
+                            <constraint firstAttribute="trailing" secondItem="5rq-vh-A0Z" secondAttribute="trailing" constant="20" id="wA2-O4-6pY"/>
                             <constraint firstAttribute="trailing" secondItem="XTu-kF-MRB" secondAttribute="trailing" constant="20" id="zGz-iK-wMQ"/>
                             <constraint firstItem="6XS-7K-rzB" firstAttribute="top" secondItem="XTu-kF-MRB" secondAttribute="bottom" id="za0-Fn-n5V"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="وسائل الإعلام" image="Media" selectedImage="MediaActive" id="Ccf-ec-5D7"/>
                     <connections>
+                        <outlet property="MediaCollection" destination="1ae-vX-z2s" id="OaB-Uj-bdv"/>
                         <outlet property="tblv_MediaTable" destination="XTu-kF-MRB" id="5VD-wM-FAL"/>
                     </connections>
                 </viewController>
