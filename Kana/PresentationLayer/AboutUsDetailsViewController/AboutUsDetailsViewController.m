@@ -88,6 +88,7 @@
              }
              else
              {
+                 alert=[[SCLAlertView alloc]init];
                  [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
                  [hud hideAnimated:YES];
              }
@@ -99,6 +100,7 @@
         
     }
     else{
+        alert=[[SCLAlertView alloc]init];
         [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
     }
     

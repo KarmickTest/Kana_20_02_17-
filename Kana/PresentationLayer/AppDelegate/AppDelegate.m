@@ -12,7 +12,7 @@
 #import "Constant.h"
 
 @interface AppDelegate (){
-    FirstViewController *mFirstViewController;
+    TabBarController *mTabBarController;
 }
 
 @end
@@ -46,15 +46,17 @@
 
     if ([languageCheck1 isEqualToString:@"en"]) {
         
-         mFirstViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FirstViewController"];
-        UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:mFirstViewController];
+         mTabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TabBarController"];
+        UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:mTabBarController];
+        [mTabBarController setSelectedIndex:0];
         [navigation setNavigationBarHidden:YES animated:YES];
     
          self.window.rootViewController = navigation;
     }
   else{
-       mFirstViewController = [[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"FirstViewController"];
-       UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:mFirstViewController];
+       mTabBarController = [[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TabBarController"];
+      [mTabBarController setSelectedIndex:5];
+       UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:mTabBarController];
        [navigation setNavigationBarHidden:YES animated:YES];
       
       self.window.rootViewController = navigation;

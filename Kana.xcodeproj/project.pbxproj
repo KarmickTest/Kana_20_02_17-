@@ -11,6 +11,11 @@
 		4E08EE2E1E446D040018441D /* FaqViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E08EE2D1E446D040018441D /* FaqViewController.m */; };
 		4E111C8D1E49D24E0052E601 /* Arabic_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E111C8B1E49D24E0052E601 /* Arabic_Storyboard.storyboard */; };
 		4E2B130F1E3B19E200B6BA18 /* DoctorListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B130E1E3B19E200B6BA18 /* DoctorListingViewController.m */; };
+<<<<<<< HEAD
+=======
+		4E5DBF321E7ABAD200FF4916 /* Singelton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DBF311E7ABAD200FF4916 /* Singelton.m */; };
+		4E7AF97D1E5703D3004CDA9B /* LocationTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7AF97C1E5703D3004CDA9B /* LocationTableCell.m */; };
+>>>>>>> origin/master
 		4E8C45C31E263AA20036371A /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C45C11E263AA20036371A /* FooterView.m */; };
 		4E8C45C41E263AA20036371A /* FooterView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8C45C21E263AA20036371A /* FooterView_iPad.xib */; };
 		4E8C45C91E264A180036371A /* MediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C45C81E264A180036371A /* MediaViewController.m */; };
@@ -52,7 +57,6 @@
 		4EDF35061E26360300C3736B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF349F1E26360300C3736B /* SVProgressHUD.m */; };
 		4EDF35071E26360300C3736B /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF34A21E26360300C3736B /* Utility.m */; };
 		4EDF35081E26360300C3736B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF34A61E26360300C3736B /* Base64.m */; };
-		4EDF35091E26360300C3736B /* Singelton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF34A91E26360300C3736B /* Singelton.m */; };
 		4EDF350A1E26360300C3736B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF34AC1E26360300C3736B /* User.m */; };
 		4EDF35371E26370600C3736B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF35331E26370600C3736B /* AppDelegate.m */; };
 		4EF48FE21E7AC31F004BF430 /* AboutUsCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF48FC31E7AC31F004BF430 /* AboutUsCell1.m */; };
@@ -81,6 +85,13 @@
 		4E111C8F1E49D2720052E601 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Arabic_Storyboard.strings; sourceTree = "<group>"; };
 		4E2B130D1E3B19E200B6BA18 /* DoctorListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorListingViewController.h; sourceTree = "<group>"; };
 		4E2B130E1E3B19E200B6BA18 /* DoctorListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorListingViewController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		4E5DBF301E7ABAD200FF4916 /* Singelton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singelton.h; sourceTree = "<group>"; };
+		4E5DBF311E7ABAD200FF4916 /* Singelton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singelton.m; sourceTree = "<group>"; };
+		4E7AF97B1E5703D3004CDA9B /* LocationTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableCell.h; sourceTree = "<group>"; };
+		4E7AF97C1E5703D3004CDA9B /* LocationTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableCell.m; sourceTree = "<group>"; };
+>>>>>>> origin/master
 		4E8C45C01E263AA20036371A /* FooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterView.h; sourceTree = "<group>"; };
 		4E8C45C11E263AA20036371A /* FooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterView.m; sourceTree = "<group>"; };
 		4E8C45C21E263AA20036371A /* FooterView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterView_iPad.xib; sourceTree = "<group>"; };
@@ -147,8 +158,6 @@
 		4EDF34A21E26360300C3736B /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		4EDF34A51E26360300C3736B /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		4EDF34A61E26360300C3736B /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
-		4EDF34A81E26360300C3736B /* Singelton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singelton.h; sourceTree = "<group>"; };
-		4EDF34A91E26360300C3736B /* Singelton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singelton.m; sourceTree = "<group>"; };
 		4EDF34AB1E26360300C3736B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		4EDF34AC1E26360300C3736B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		4EDF35321E26370600C3736B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -244,6 +253,27 @@
 			path = DoctorListingViewController;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		4E5DBF2F1E7ABAD200FF4916 /* ServerConnection */ = {
+			isa = PBXGroup;
+			children = (
+				4E5DBF301E7ABAD200FF4916 /* Singelton.h */,
+				4E5DBF311E7ABAD200FF4916 /* Singelton.m */,
+			);
+			path = ServerConnection;
+			sourceTree = "<group>";
+		};
+		4E7AF97A1E5703A5004CDA9B /* LocationTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				4E7AF97B1E5703D3004CDA9B /* LocationTableCell.h */,
+				4E7AF97C1E5703D3004CDA9B /* LocationTableCell.m */,
+			);
+			path = LocationTableCell;
+			sourceTree = "<group>";
+		};
+>>>>>>> origin/master
 		4E8C45BF1E263AA20036371A /* CustomFooterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,8 +575,8 @@
 		4EDF34A31E26360300C3736B /* DataAccessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4E5DBF2F1E7ABAD200FF4916 /* ServerConnection */,
 				4EDF34A41E26360300C3736B /* Base64 */,
-				4EDF34A71E26360300C3736B /* ServerConnection */,
 				4EDF34AA1E26360300C3736B /* User */,
 			);
 			path = DataAccessLayer;
@@ -559,15 +589,6 @@
 				4EDF34A61E26360300C3736B /* Base64.m */,
 			);
 			path = Base64;
-			sourceTree = "<group>";
-		};
-		4EDF34A71E26360300C3736B /* ServerConnection */ = {
-			isa = PBXGroup;
-			children = (
-				4EDF34A81E26360300C3736B /* Singelton.h */,
-				4EDF34A91E26360300C3736B /* Singelton.m */,
-			);
-			path = ServerConnection;
 			sourceTree = "<group>";
 		};
 		4EDF34AA1E26360300C3736B /* User */ = {
@@ -882,8 +903,11 @@
 				4E8C45CC1E264A2C0036371A /* SearchViewController.m in Sources */,
 				4E08EE2E1E446D040018441D /* FaqViewController.m in Sources */,
 				4EDF35371E26370600C3736B /* AppDelegate.m in Sources */,
+<<<<<<< HEAD
 				4EF48FEB1E7AC31F004BF430 /* MoreCell.m in Sources */,
 				4EDF35091E26360300C3736B /* Singelton.m in Sources */,
+=======
+>>>>>>> origin/master
 				4EB768041E276190006596AC /* GalleryViewController.m in Sources */,
 				4EDF34F31E26360300C3736B /* Reachability.m in Sources */,
 				4EF48FF01E7AC364004BF430 /* MediaCollectionViewCell.m in Sources */,
@@ -891,8 +915,13 @@
 				4EA9B19B1E28ADCD007C64DA /* FirstViewController.m in Sources */,
 				4EF48FE51E7AC31F004BF430 /* DoctorDetalisCell.m in Sources */,
 				4EDF34EB1E26360300C3736B /* DataValidation.m in Sources */,
+<<<<<<< HEAD
 				4EF48FE71E7AC31F004BF430 /* GalleryCell.m in Sources */,
 				4EF48FE81E7AC31F004BF430 /* HomeCell.m in Sources */,
+=======
+				4E270C5C1E556842001F5FF6 /* DoctorDetalisCell.m in Sources */,
+				4E5DBF321E7ABAD200FF4916 /* Singelton.m in Sources */,
+>>>>>>> origin/master
 				4EA9B17F1E28A800007C64DA /* SearchDetalisViewController.m in Sources */,
 				4E9EEB201E488D15003E1513 /* TestimonialsViewController.m in Sources */,
 				4EDF33331E2634CA00C3736B /* main.m in Sources */,

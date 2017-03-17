@@ -77,6 +77,7 @@
                 DebugLog(@"arrmHomeContent====%@",MediaListArray);
             }
             else{
+                alert=[[SCLAlertView alloc]init];
                 [alert showWarning:self title:@"Oops!" subTitle:[testResult valueForKey:@"message"] closeButtonTitle:@"OK" duration:0.0f];
                 
             }
@@ -87,6 +88,7 @@
         } andString:strClinicListApi];
     }
     else{
+        alert=[[SCLAlertView alloc]init];
         [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
     }
 }

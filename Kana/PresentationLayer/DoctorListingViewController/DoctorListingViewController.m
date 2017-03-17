@@ -37,7 +37,7 @@
     _tblv_DoctorListing.dataSource=self;
     arrmDoctorListing=[[NSMutableArray alloc]init];
     strClinicId=[[NSUserDefaults standardUserDefaults] objectForKey:@"ClinicId"];
-    alert= [[SCLAlertView alloc] init];
+    
     DebugLog(@"strClinicId%@ ==== specId%@",strClinicId,_strSpecialistId);
    
     [self getDoctorList];
@@ -78,7 +78,7 @@
             }
             else{
                 _tblv_DoctorListing.hidden=YES;
-                
+                alert=[[SCLAlertView alloc]init];
                 [alert showWarning:self title:WARNINGTITLE subTitle:[testResult valueForKey:@"message"] closeButtonTitle:@"OK" duration:0.0f];
                 
             }
@@ -90,6 +90,7 @@
       
     }
     else{
+        alert=[[SCLAlertView alloc]init];
          [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
 
         
@@ -143,12 +144,30 @@
         mMediaSearchCell = [nibArray objectAtIndex:0];
         
     }
-    mMediaSearchCell.lbl_Description1.text=[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"name"];
-    mMediaSearchCell.lbl_Description2.text=[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"email"];
-    mMediaSearchCell.lbl_Description3.text=[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"qualification"];
-    mMediaSearchCell.lbl_Description4.text=[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"specialities"];
-    mMediaSearchCell.lbl_Description5.text=[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"case_studies"];
+    mMediaSearchCell.contentView.layer.borderWidth=1.0f;
+    mMediaSearchCell.contentView.layer.borderColor=[UIColor colorWithRed:200.0f/255.0f green:200.0f/255.0f blue:204.0f/255.0f alpha:1.0f].CGColor;
+    [mMediaSearchCell.lbl_Description1 setText:[[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"name"] uppercaseString]];
+    
+    NSString *qualification = [[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"qualification"];
+    qualification = [qualification stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    qualification = [qualification stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    mMediaSearchCell.lbl_Description3.text=qualification;
+    NSString *specialities = [[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"specialities"];
+    specialities = [specialities stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    specialities = [specialities stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    mMediaSearchCell.lbl_Description4.text=specialities;
+    
+    // mMediaSearchCell.lbl_Description5.text=[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"case_studies"];
+    //mMediaSearchCell.lbl_Description2.text=[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"email"];
+    
     [mMediaSearchCell.imgv_Media_Image sd_setImageWithURL:[NSURL URLWithString:[[arrmDoctorListing objectAtIndex:indexPath.section] valueForKey:@"image"]] placeholderImage:[UIImage imageNamed:@"doctor_place_holder"] options:/* DISABLES CODE */ (0) == 0?SDWebImageRefreshCached : 0];
+    mMediaSearchCell.imgv_Media_Image.layer.shadowColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.25f] CGColor];
+    mMediaSearchCell.imgv_Media_Image.layer.shadowOffset = CGSizeMake(5, 5.0f);
+    mMediaSearchCell.imgv_Media_Image.layer.shadowOpacity = 0.5f;
+    mMediaSearchCell.imgv_Media_Image.layer.shadowRadius = 5.0f;
+    mMediaSearchCell.imgv_Media_Image.layer.masksToBounds = NO;
+    mMediaSearchCell.imgv_Media_Image.layer.cornerRadius = 25.0f;
+    mMediaSearchCell.imgv_Media_Image.clipsToBounds=YES;
     mMediaSearchCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return mMediaSearchCell;
   

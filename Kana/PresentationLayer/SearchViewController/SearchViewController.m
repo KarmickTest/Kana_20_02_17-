@@ -103,6 +103,7 @@
 #pragma mark -  Call Web Service
 
 -(void)GetSearchList :(NSString *)str{
+    self.view.userInteractionEnabled=NO;
      languageCheck=[[NSUserDefaults standardUserDefaults] objectForKey:@"languageCode"];
     DebugLog(@"languageCheck%@",languageCheck);
     if ([Utility isNetworkAvailable]==YES) {
@@ -202,6 +203,7 @@
     else{
         storyboard =[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:nil];
     }
+    
     
     CATransition *transition = [CATransition animation];
     transition.duration = .3;

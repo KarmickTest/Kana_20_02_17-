@@ -13,7 +13,7 @@
 @interface MoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *arrMoreContent;
-    FirstViewController *mFirstViewController;
+    TabBarController *mTabBarController;
      NSString *languageCheck;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tblv_More;
@@ -98,8 +98,8 @@
             NSString *languageCode=@"en";
             [[NSUserDefaults standardUserDefaults]setObject:languageCode forKey:@"languageCode"];
             [[NSUserDefaults standardUserDefaults] synchronize];
-            mFirstViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"FirstViewController"];
-            [self.navigationController pushViewController:mFirstViewController animated:NO];
+            mTabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TabBarController"];
+            [self.navigationController pushViewController:mTabBarController animated:NO];
             
             
             
@@ -117,8 +117,9 @@
             [[NSUserDefaults standardUserDefaults] synchronize];
             
             DebugLog(@"NSUserDefaults%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
-            mFirstViewController = [[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"FirstViewController"];
-            [self.navigationController pushViewController:mFirstViewController animated:NO];
+            mTabBarController = [[UIStoryboard storyboardWithName:@"Arabic_Storyboard" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TabBarController"];
+            [mTabBarController setSelectedIndex:5];
+            [self.navigationController pushViewController:mTabBarController animated:NO];
             
         }];
         

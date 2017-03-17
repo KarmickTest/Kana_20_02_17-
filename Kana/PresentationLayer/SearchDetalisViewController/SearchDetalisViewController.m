@@ -14,7 +14,7 @@
 
 
 
-@interface SearchDetalisViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate>
+@interface SearchDetalisViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     DectorDetalisCollectionViewCell *cell;
     NSIndexPath *scrollindex;
@@ -80,9 +80,9 @@
     self.btn_Cancel.clipsToBounds=YES;
     
     
-    self.DoctorTimeTableView.delegate=self;
-    self.DoctorTimeTableView.dataSource=self;
-    self.DoctorTimeTableView.separatorColor=[UIColor clearColor];
+//    self.DoctorTimeTableView.delegate=self;
+//    self.DoctorTimeTableView.dataSource=self;
+//    self.DoctorTimeTableView.separatorColor=[UIColor clearColor];
     [self.DoctorTimeTableView reloadData];
     arrmCliniclocation=[[NSMutableArray alloc]init];
     arrmAvailableDate=[[NSMutableArray alloc]init];
@@ -90,9 +90,9 @@
     _vw_Mask_View.hidden=YES;
     _vw_Location_PopUp.hidden=YES;
     
-    _tblv_Location_Table.delegate=self;
-    _tblv_Location_Table.dataSource=self;
-    _tblv_Location_Table.tag=1002;
+//    _tblv_Location_Table.delegate=self;
+//    _tblv_Location_Table.dataSource=self;
+//    _tblv_Location_Table.tag=1002;
 //    _calendarManager = [JTCalendarManager new];
 //    _calendarManager.delegate = self;
 //    
@@ -156,16 +156,16 @@
                  arrmTrimAvailableDate=[[arrmCliniclocation objectAtIndex:0]valueForKey:@"availabledate"];
                  DebugLog(@"arrmTrimAvailableDate%@",arrmTrimAvailableDate);
                  _lbl_Doctor_Location.text=[[arrmCliniclocation objectAtIndex:0]valueForKey:@"location"];
-                 for (int i=0; i<arrmTrimAvailableDate.count; i++) {
-                 NSString *str=[NSString stringWithFormat:@"%@",[[arrmTrimAvailableDate valueForKey:@"time"] objectAtIndex:i]];
-                 if (str.length>0) {
-                 DebugLog(@"str====%@",str);
-                 [arrmAvailableDate addObject:[arrmTrimAvailableDate objectAtIndex:i]];
-                 DebugLog(@"arrmAvailableDate====%@",arrmAvailableDate);
-                        
-                 [_DoctorTimeTableView reloadData];
-                }
-                }
+//                 for (int i=0; i<arrmTrimAvailableDate.count; i++) {
+//                 NSString *str=[NSString stringWithFormat:@"%@",[[arrmTrimAvailableDate valueForKey:@"time"] objectAtIndex:i]];
+//                 if (str.length>0) {
+//                 DebugLog(@"str====%@",str);
+//                 [arrmAvailableDate addObject:[arrmTrimAvailableDate objectAtIndex:i]];
+//                 DebugLog(@"arrmAvailableDate====%@",arrmAvailableDate);
+//                        
+//                 [_DoctorTimeTableView reloadData];
+//                }
+//                }
                 }
              else{
                   _lbl_Doctor_Location.text=[[arrmCliniclocation objectAtIndex:0]valueForKey:@"location"];
@@ -173,21 +173,22 @@
                       arrmTrimAvailableDate=[[arrmCliniclocation objectAtIndex:0]valueForKey:@"availabledate"];
                   }
                  DebugLog(@"arrmTrimAvailableDate%@",arrmTrimAvailableDate);
-                 for (int i=0; i<arrmTrimAvailableDate.count; i++) {
-                     NSString *str=[NSString stringWithFormat:@"%@",[[arrmTrimAvailableDate valueForKey:@"time"] objectAtIndex:i]];
-                     if (str.length>0) {
-                         DebugLog(@"str====%@",str);
-                         [arrmAvailableDate addObject:[arrmTrimAvailableDate objectAtIndex:i]];
-                         DebugLog(@"arrmAvailableDate====%@",arrmAvailableDate);
-                         
-                         [_DoctorTimeTableView reloadData];
-                     }
-                 }
+//                 for (int i=0; i<arrmTrimAvailableDate.count; i++) {
+//                     NSString *str=[NSString stringWithFormat:@"%@",[[arrmTrimAvailableDate valueForKey:@"time"] objectAtIndex:i]];
+//                     if (str.length>0) {
+//                         DebugLog(@"str====%@",str);
+//                         [arrmAvailableDate addObject:[arrmTrimAvailableDate objectAtIndex:i]];
+//                         DebugLog(@"arrmAvailableDate====%@",arrmAvailableDate);
+//                         
+//                         [_DoctorTimeTableView reloadData];
+//                     }
+//                 }
                  
              }
              }
              else
              {
+                 alert=[[SCLAlertView alloc]init];
                  [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
                  [hud hideAnimated:YES];
              }
@@ -196,6 +197,7 @@
          } andString:strDoctorDetailsApi andParam:Keyvalue];
     }
     else{
+        alert=[[SCLAlertView alloc]init];
         [alert showWarning:self title:@"Warning" subTitle:@"Network error" closeButtonTitle:@"OK" duration:0.0f];
     }
 }
@@ -227,7 +229,7 @@
 }
 
 #pragma mark - TableView Delegate and DataSource
-
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (tableView.tag==1002) {
         return [[arrmCliniclocation valueForKey:@"location"] count];
@@ -300,7 +302,7 @@
     }
     _vw_Mask_View.hidden=YES;
     _vw_Location_PopUp.hidden=YES;
-}
+}*/
 #pragma mark - ColletionViewDelegate
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
